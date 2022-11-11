@@ -3,6 +3,7 @@ package com.swkim.myfish
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebView
 import android.widget.Toast
 import com.swkim.myfish.databinding.ActivityLoginBinding
 
@@ -12,7 +13,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
 
     }
 

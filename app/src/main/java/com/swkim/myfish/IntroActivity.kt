@@ -1,17 +1,21 @@
 package com.swkim.myfish
 
+import android.Manifest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.swkim.myfish.databinding.ActivityIntroBinding
 
 class IntroActivity : AppCompatActivity() {
+
 
     var backPressedTime : Long = 0
     private lateinit var binding : ActivityIntroBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         binding = ActivityIntroBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
