@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="@+id/TopBar" />
 
     <ImageView
-        android:src="@drawable/ssogari"
+        android:src="@drawable/janga"
         android:layout_marginTop="15dp"
         android:id="@+id/imageButton"
         android:layout_width="match_parent"
@@ -66,7 +66,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/minsans_regular"
         android:gravity="center"
-        android:text="쏘가리"
+        android:text="장어"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/minsans_regular"
         android:gravity="center"
-        android:text="포획금지기간 : 4.20~5.30"
+        android:text="포획금지기간 : 없음"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/minsans_regular"
         android:gravity="center"
-        android:text="포획금지체장 : 18cm 이하"
+        android:text="포획금지체장 : 40cm / 35cm"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"

@@ -1,30 +1,23 @@
 package com.swkim.myfish
 
-import android.app.Activity
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
 import android.view.View
 import android.webkit.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.swkim.myfish.databinding.ActivityWorkingBinding
-import java.lang.Exception
-import java.util.jar.Manifest
-import android.content.Intent
 
 class WorkingActivity : AppCompatActivity() {
-
+    private var backPressedTime : Long = 0
     private val mFilePathCallback: ValueCallback<*>? = null
     private lateinit var binding: ActivityWorkingBinding
 
@@ -50,26 +43,115 @@ class WorkingActivity : AppCompatActivity() {
         spinner.adapter =
             ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.spinnerlayout)
 
-        spinner.onItemClickListener = object:AdapterView.OnItemSelectedListener,
-            AdapterView.OnItemClickListener {
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                binding.seeButton.setOnClickListener {
-                    startActivity(Intent(this@WorkingActivity, gazami_detail::class.java))
-                    finish()
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
+                if (position == 1) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, gazami_detail::class.java))
+                        finish()
+                    }
+                } else if (position == 2) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, galchi_detail::class.java))
+                        finish()
+                    }
                 }
+                else if (position == 3) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, gamsung_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 4) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, daegu_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 5) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, mal_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 6) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, bollak_detail::class.java))
+                        finish()
+                    }
+                }
+
+                else if (position == 7) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, ssogari_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 8) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, yeolmok_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 9) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, okdom_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 10) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, rockfish_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 11) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, euna_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 12) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, janga_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 13) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, jeona_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 14) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, jogi_detail::class.java))
+                        finish()
+                    }
+                }
+                else if (position == 15) {
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@WorkingActivity, jeona_detail::class.java))
+                        finish()
+                    }
+                }
+
+
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
 
-            override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                TODO("Not yet implemented")
-            }
 
         }
-
     }
+
 
     private fun setUpUI() {
         binding.apply {
@@ -143,6 +225,7 @@ class WorkingActivity : AppCompatActivity() {
         if (webView.canGoBack()) {
             webView.goBack()
         } else {
+            startActivity(Intent(this@WorkingActivity, MainActivity::class.java))
             finish()
         }
     }
@@ -215,6 +298,7 @@ class WorkingActivity : AppCompatActivity() {
             }
         }
     }
+
 
 
 

@@ -7,27 +7,19 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.swkim.myfish.databinding.ActivityDaeguDetailBinding
+import com.swkim.myfish.databinding.ActivityRatDetailBinding
 
-class daegu_detail : AppCompatActivity() {
-
+class rat_detail : AppCompatActivity() {
     private var backPressedTime : Long = 0
-
-    private lateinit var binding : ActivityDaeguDetailBinding
+    private lateinit var binding : ActivityRatDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityDaeguDetailBinding.inflate(layoutInflater)
+        binding = ActivityRatDetailBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.homeButton.setOnClickListener {
-            startActivity(Intent(this@daegu_detail, MainActivity::class.java))
-            finish()
-        }
-
         val spinner = binding.spinner
 
-        spinner.adapter =
-            ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.spinnerlayout)
+        spinner.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.spinnerlayout)
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -38,90 +30,90 @@ class daegu_detail : AppCompatActivity() {
             ) {
                 if (position == 1) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, gazami_detail::class.java))
+                        startActivity(Intent(this@rat_detail, gazami_detail::class.java))
                         finish()
                     }
                 } else if (position == 2) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, galchi_detail::class.java))
+                        startActivity(Intent(this@rat_detail, galchi_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 3) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, gamsung_detail::class.java))
+                        startActivity(Intent(this@rat_detail, gamsung_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 4) {
-
+                    binding.seeButton.setOnClickListener {
+                        startActivity(Intent(this@rat_detail, daegu_detail::class.java))
+                        finish()
+                    }
                 }
                 else if (position == 5) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, mal_detail::class.java))
+                        startActivity(Intent(this@rat_detail, mal_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 6) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, bollak_detail::class.java))
+                        startActivity(Intent(this@rat_detail, bollak_detail::class.java))
                         finish()
                     }
                 }
 
                 else if (position == 7) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, ssogari_detail::class.java))
+                        startActivity(Intent(this@rat_detail, ssogari_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 8) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, yeolmok_detail::class.java))
+                        startActivity(Intent(this@rat_detail, yeolmok_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 9) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, okdom_detail::class.java))
+                        startActivity(Intent(this@rat_detail, okdom_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 10) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, rockfish_detail::class.java))
+                        startActivity(Intent(this@rat_detail, rockfish_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 11) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, euna_detail::class.java))
+                        startActivity(Intent(this@rat_detail, euna_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 12) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, janga_detail::class.java))
+                        startActivity(Intent(this@rat_detail, janga_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 13) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, jeona_detail::class.java))
+                        startActivity(Intent(this@rat_detail, jeona_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 14) {
                     binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, jogi_detail::class.java))
+                        startActivity(Intent(this@rat_detail, jogi_detail::class.java))
                         finish()
                     }
                 }
                 else if (position == 15) {
-                    binding.seeButton.setOnClickListener {
-                        startActivity(Intent(this@daegu_detail, rat_detail::class.java))
-                        finish()
-                    }
+
                 }
 
 
@@ -133,10 +125,7 @@ class daegu_detail : AppCompatActivity() {
 
 
         }
-
-
     }
-
 
     override fun onBackPressed() {
         if (System.currentTimeMillis() - backPressedTime < 2000) {

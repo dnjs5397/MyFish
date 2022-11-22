@@ -34,14 +34,16 @@
         app:layout_constraintTop_toBottomOf="@+id/TopBar"
         android:orientation="horizontal" />
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/home_button"
         android:layout_marginRight="10dp"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_menu_24"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_baseline_home_24"
         app:layout_constraintBottom_toBottomOf="@+id/TopBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TopBar" />
+        app:layout_constraintTop_toTopOf="@+id/TopBar"
+        android:background="#00000000"/>
 
     <ImageView
         android:src="@drawable/galchi"
@@ -114,6 +116,7 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/seeButton"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:fontFamily="@font/minsans_regular"

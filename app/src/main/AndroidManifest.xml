@@ -23,6 +23,21 @@
         android:theme="@style/Theme.MyFish"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".rat_detail"
+            android:exported="false" />
+        <activity
+            android:name=".jogi_detail"
+            android:exported="false" />
+        <activity
+            android:name=".jeona_detail"
+            android:exported="false" />
+        <activity
+            android:name=".mal_detail"
+            android:exported="false" />
+        <activity
+            android:name=".janga_detail"
+            android:exported="false" />
+        <activity
             android:name=".euna_detail"
             android:exported="false" />
         <activity
@@ -61,11 +76,7 @@
         <activity
             android:name=".WorkingActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".JoinActivity"
@@ -75,13 +86,24 @@
             android:exported="false" />
         <activity
             android:name=".IntroActivity"
-            android:exported="true" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".SplashActivity"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true">
+
+
+        </activity>
     </application>
 
 </manifest>

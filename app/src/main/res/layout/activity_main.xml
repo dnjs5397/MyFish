@@ -20,7 +20,7 @@
             android:layout_margin="8dp"
             android:fontFamily="@font/minsans_regular"
             android:gravity="center"
-            android:text="My Fish"
+            android:text="Fishing World"
             android:textColor="@color/white"
             android:textSize="25sp" />
 
@@ -34,14 +34,6 @@
         app:layout_constraintTop_toBottomOf="@+id/TopBar"
         android:orientation="horizontal" />
 
-    <ImageView
-        android:layout_marginRight="10dp"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_menu_24"
-        app:layout_constraintBottom_toBottomOf="@+id/TopBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TopBar" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -69,12 +61,15 @@
                 android:src="@drawable/ic_baseline_search_24" />
 
             <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/fish_info"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/button"
-                android:src="@drawable/ic_baseline_group_24"/>
+                android:src="@drawable/ic_baseline_live_help_24"/>
 
         </LinearLayout>
 
@@ -101,7 +96,7 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="커뮤니티"
+                android:text="금어기 조회"
                 android:fontFamily="@font/minsans_regular"
                 android:textColor="@color/white"
                 android:textSize="16sp"

@@ -3,9 +3,13 @@ package com.swkim.myfish
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.swkim.myfish.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private var backPressedTime : Long = 0
+
     private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -17,6 +21,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, WorkingActivity::class.java))
             finish()
         }
+
+        binding.fishInfo.setOnClickListener {
+            startActivity(Intent(this, gazami_detail::class.java))
+            finish()
+        }
+    }
+
+    override fun onBackPressed() {
+        if (System.currentTimeMillis() - backPressedTime < 2000) {
+            finish()
+            return
+        }
+        Toast.makeText(this, "'뒤로' 버튼을 한번 더 누르시면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show()
+        backPressedTime = System.currentTimeMillis()
     }
 
 }

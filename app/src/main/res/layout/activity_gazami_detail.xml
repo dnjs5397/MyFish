@@ -34,14 +34,16 @@
         app:layout_constraintTop_toBottomOf="@+id/TopBar"
         android:orientation="horizontal" />
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/home_button"
         android:layout_marginRight="10dp"
-        android:layout_width="30dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_menu_24"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_baseline_home_24"
         app:layout_constraintBottom_toBottomOf="@+id/TopBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TopBar" />
+        app:layout_constraintTop_toTopOf="@+id/TopBar"
+        android:background="#00000000"/>
 
     <ImageView
         android:src="@drawable/gazami"
@@ -94,7 +96,7 @@
         android:gravity="center"
         android:text="(단, 문치가자미는 12.01~익년 01.31)"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -118,7 +120,7 @@
         android:gravity="center"
         android:text="(단, 3년간은 17cm)"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -127,7 +129,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <Spinner
             android:id="@+id/spinner"
@@ -137,6 +139,7 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/seeButton"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:fontFamily="@font/minsans_regular"
