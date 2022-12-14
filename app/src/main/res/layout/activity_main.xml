@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainColor"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -25,6 +26,18 @@
             android:textSize="25sp" />
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:src="@drawable/ic_baseline_contact_support_24"
+        android:background="#00000000"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopBar">
+
+
+    </ImageButton>
 
     <LinearLayout
         android:id="@+id/linearLayout"

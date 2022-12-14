@@ -17,6 +17,11 @@ class ssogari_detail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.homeButton.setOnClickListener {
+            startActivity(Intent(this@ssogari_detail, MainActivity::class.java))
+            finish()
+        }
+
         val spinner = binding.spinner
 
         spinner.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.spinnerlayout)

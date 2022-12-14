@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TextView
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="본 어플리케이션은 개발 단계입니다.\n현재 가자미, 갈치, 감성돔, 대구, 말쥐치, 볼락, 쏘가리, 열목어, 옥돔, 우럭, 은어, 장어, 전어, 조기, 쥐노래미 총 15종의 분류가 가능합니다."
+        android:gravity="center"
+        android:fontFamily="@font/minsans_regular"/>
+
+
+
+
+</LinearLayout>
